@@ -27,22 +27,21 @@ class App extends Component {
     return (
     	<Router>
 		      <div className="App">
-			      	<h1>Awww Reddit Posts</h1>
-			      	<Link to="/list">List View</Link>
-			      	<Link to="/grid">Grid View</Link>
+			      	<h1>Rich Man's Reddit? </h1>
+			      	<Link to="/list"> List View  </Link>
+			      	<Link to="/grid"> Grid View </Link>
 
 
-			      <Switch>
-			      		<Route path="/list" render={() => (
-			      			<div>
-				      			{listPosts}
-				      		</div>
-			      		)}/>
-
-			      		<Route path="/grid" render={() => (
-			      			<div className="Container">
-			      				{gridPosts}
-			      			</div>
+		 <Switch>
+			     <Route path="/list" render={() => (
+			      	<div>
+				      	{listPosts}
+				      </div>
+			      )}/>
+			     <Route path="/grid" render={() => (
+			      <div className="Container">
+			      		{gridPosts}
+			      		</div>
 			      		)}/>
 			      </Switch>
 			 </div>

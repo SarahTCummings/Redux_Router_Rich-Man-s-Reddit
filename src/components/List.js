@@ -1,22 +1,29 @@
-
 import React, { Component } from 'react';
-import Grid from './Grid';
-
+import { connect } from 'react-redux';
 
 class List extends Component {
 
-  render() {
-    return (
-      <div className="List">
-        Sarah
-      </div>
-    );
-  }
+	render() {
+
+		return(
+			<article>
+				<section>
+					<div className="PostItem">
+						<img src={this.props.post.thumbnail} alt={this.props.post.thumbnail}/>
+						<h4 className="PostTitle">{this.props.post.title}</h4>
+					</div>
+				</section>
+			</article>
+		);
+	}
+
+
 }
 
+function mapStateToProps(state) {
+	return {
+		posts: state.posts
+	}
+}
 
-
-
-
-
-export default List;
+export default connect(mapStateToProps)(List);
