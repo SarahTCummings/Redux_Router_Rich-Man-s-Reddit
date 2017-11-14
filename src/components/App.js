@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import List from "./List";
 import Grid from "./Grid";
 import { connect } from 'react-redux';
+
 import {
     BrowserRouter as Router,
     Route,
@@ -27,7 +28,7 @@ class App extends Component {
     return (
     	<Router>
 		      <div className="App">
-			      	<h1>Rich Man's Reddit? </h1>
+			      	<h1>Rich Man's Reddit? (I know it's ugly I'm just trying to figure this out) </h1>
 			      	<Link to="/list"> List View  </Link>
 			      	<Link to="/grid"> Grid View </Link>
 
